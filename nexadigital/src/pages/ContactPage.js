@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from "react-helmet";
 
 const faqs = [
   { q: 'How long does a website take to build?', a: 'A standard 5-10 page website takes 2-4 weeks. Complex web apps or e-commerce platforms typically take 6-12 weeks depending on scope.' },
@@ -49,6 +50,20 @@ const ContactPage = () => {
 
   return (
     <div style={{ opacity: visible ? 1 : 0, transition: 'opacity 0.4s ease', paddingTop: 64 }}>
+      <Helmet>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18230959839"
+        />
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18230959839');
+          `}
+        </script>
+      </Helmet>
 
       {/* HEADER */}
       <section style={{ padding: '5rem 2.5rem 3rem', maxWidth: 700, margin: '0 auto', textAlign: 'center' }}>

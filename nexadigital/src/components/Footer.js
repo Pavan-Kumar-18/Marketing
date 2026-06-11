@@ -2,6 +2,21 @@ import React from 'react';
 
 const Footer = ({ setPage }) => {
   return (
+    <>
+    <Helmet>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18230959839"
+        />
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18230959839');
+          `}
+        </script>
+      </Helmet>
     <footer style={{
       borderTop: '0.5px solid rgba(255,255,255,0.06)',
       padding: '3rem 2.5rem 2rem',
@@ -112,6 +127,7 @@ const Footer = ({ setPage }) => {
         </div>
       </div>
     </footer>
+    </>
   );
 };
 
