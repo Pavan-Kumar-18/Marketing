@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from "react-helmet";
 
 const services = [
   { icon: '💻', title: 'Website Development', desc: 'Custom, blazing-fast websites built with React, Next.js & Node.js. Fully responsive and CMS-ready.' },

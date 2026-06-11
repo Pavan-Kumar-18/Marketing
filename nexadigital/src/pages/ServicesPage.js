@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from "react-helmet";
 
 const services = [
   {
@@ -67,6 +68,21 @@ const ServicesPage = ({ setPage }) => {
   }, []);
 
   return (
+    <>
+     <Helmet>
+            <script
+              async
+              src="https://www.googletagmanager.com/gtag/js?id=AW-18230959839"
+            />
+            <script>
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'AW-18230959839');
+              `}
+            </script>
+          </Helmet>
     <div style={{ opacity: visible ? 1 : 0, transition: 'opacity 0.4s ease', paddingTop: 64 }}>
 
       {/* PAGE HEADER */}
@@ -212,6 +228,7 @@ const ServicesPage = ({ setPage }) => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 
